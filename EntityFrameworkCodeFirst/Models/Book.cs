@@ -13,6 +13,9 @@ namespace EntityFrameworkCodeFirst.Models
         [MaxLength(20)]
         public string ISBN { get; set; }
         public DateTime DatePublished { get; set; }
-        public Category Category { get; set; }
+        public int CategoryId { get; set; }
+        public int AuthorId { get; set; }
+        public virtual Category Category { get; set; }
+        public virtual Author Author { get; set; }
     }
 }
